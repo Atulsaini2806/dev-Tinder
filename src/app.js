@@ -1,5 +1,4 @@
 const express = require('express');
-
 const app = express();
 
 app.get("/user/:userId/:name/:passward" , (req ,res) => {
@@ -19,8 +18,6 @@ app.get("/user/:userId/:name/:passward" , (req ,res) => {
 app.use("/test", (req, res) => {
     res.send('Hello from the server!');
 });
-
-
   
 app.listen(7777, () => {
     console.log('Server is successfully listening on port 7777');

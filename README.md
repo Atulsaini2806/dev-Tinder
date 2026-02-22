@@ -1,6 +1,6 @@
 # Dev Tinder:-
 Dev Tinder is a MERN stack–based web application designed to help developers connect, network, and engage with each other. The platform provides a space where developers can discover like-minded professionals, interact based on shared interests and skills, and build meaningful connections within the developer community.
-#
+##
 
 # 🚀 Features:-
 * Developer profile creation
@@ -9,6 +9,7 @@ Dev Tinder is a MERN stack–based web application designed to help developers c
 * Secure authentication and authorization
 * Responsive and user-friendly UI
 * Feed Page
+##
 
 
 # 🛠️ Tech Stack:-
@@ -27,5 +28,6 @@ Dev Tinder is a MERN stack–based web application designed to help developers c
 
  Stack:
 * MERN (MongoDB, Express, React, Node)
+##
 
 

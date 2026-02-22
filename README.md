@@ -5,10 +5,13 @@ Dev Tinder is a MERN stack–based web application designed to help developers c
 # 🚀 Features
 * Developer profile creation
 * Discover and connect with other developers
-* Engage with developers based on interests and skills
+* Engage with developers based on Interests and skills
 * Secure authentication and authorization
 * Responsive and user-friendly UI
 * Feed Page
+
+
+
 
 # 🛠️ Tech Stack
 Frontend:

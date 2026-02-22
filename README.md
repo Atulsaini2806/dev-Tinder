@@ -10,19 +10,19 @@ Dev Tinder is a MERN stack–based web application designed to help developers c
 * Feed Page
 
 # 🛠️ Tech Stack
-Frontend:
+# Frontend:
 
-React.js
-HTML
-CSS Or Tailwind
-JavaScript
-Backend:
+* React.js
+* HTML
+* CSS Or Tailwind
+* JavaScript
+# Backend:
 
-Node.js
-Express.js
-Database:
+* Node.js
+* Express.js
+# Database:
 
-MongoDB
-Stack:
+* MongoDB
+# Stack:
 
-MERN (MongoDB, Express, React, Node)
+* MERN (MongoDB, Express, React, Node)

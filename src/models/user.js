@@ -25,7 +25,12 @@ const userSchema = mongoose.Schema({
         min : 18
     },
     gender:{
-        type : String
+        type : String,
+        validate(value){
+            if(!["male","female","other"].includes(value)){
+                throw new Error("Invalid gender value");
+            }
+        }
     },
     photoUrl:{
         type : String,
@@ -38,6 +43,8 @@ const userSchema = mongoose.Schema({
     skills:{
         type : [String]
     }
+},{
+    timestamps : true    
 });
 
-module.exports =  mongoose.model("user",userSchema);
+module.exports =  mongoose.model("User",userSchema);

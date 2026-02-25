@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const validator = require("validator");
 
 const userSchema = mongoose.Schema({
     firstName:{
@@ -15,7 +16,12 @@ const userSchema = mongoose.Schema({
         required : true,
         unique : true,
         lowercase : true,
-        trim : true
+        trim : true,
+        validate(value){
+            if(!validator.isEmail(value)){
+                throw new Error("Invalid email address:" + value);
+            }
+        }
     },
     passward:{ 
         type : String
@@ -34,7 +40,12 @@ const userSchema = mongoose.Schema({
     },
     photoUrl:{
         type : String,
-        default : "https://www.pngitem.com/middle/ixwxbwh_user-profile-dummy-hd-png-download/"
+        default : "https://www.pngitem.com/middle/ixwxbwh_user-profile-dummy-hd-png-download/",
+        validate(value){
+            if(!validator.isURL(value)){
+                throw new Error("Invalid photo URL:" + value);
+            }
+        }
     },
     about:{
         type : String,

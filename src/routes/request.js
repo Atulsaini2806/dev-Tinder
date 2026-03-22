@@ -25,7 +25,6 @@ requestRouter.post(
             return res.status(404).json({ message: "User not found" });
         }
 
-
         const existingConnectionRequest = await ConnectionRequest.findOne({
           $or: [
                 { fromUserId, toUserId },
@@ -44,16 +43,37 @@ requestRouter.post(
              status
         });
 
-        const data = await connectionRequest.save();
-        res.json({
-                message: "Connection request sent successfully!",
-                data
-        });
-       }catch(err){
-        res.status(400).send("ERROR: " + err.message);
-       }
-    }
-);
+//         const data = await connectionRequest.save();
+//         res.json({
+//                 message: 
+//                 `${req.user.firstName} is ${status} to ${toUser.firstName}`,
+//                 data
+//         });
+//        }catch(err){
+//         res.status(400).send("ERROR: " + err.message);
+//        }
+//     }
+// );
 
+
+const data = await connectionRequest.save();
+
+let message;
+if (status === "interested") {
+    message = `${req.user.firstName} is ${status} in ${toUser.firstName}`;
+} else if (status === "ignored") {
+    message = `${req.user.firstName} ${status} ${toUser.firstName}`;
+} else {
+    message = `${req.user.firstName} updated status to ${status}`;
+}
+res.json({
+    message,
+    data
+});
+
+} catch (err) {
+    res.status(400).send("ERROR: " + err.message);
+}
+});
  
  module.exports = requestRouter;

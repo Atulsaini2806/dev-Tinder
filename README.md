@@ -27,7 +27,7 @@ Dev Tinder is a MERN stack–based web application designed to help developers c
 * MongoDB
 
  Stack:
-* MERN (MongoDB, Express, React, Node)
+* MERN (MongoDB, Express, React, NodeJS)
 ##
 
 

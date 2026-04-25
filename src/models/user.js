@@ -46,14 +46,15 @@ const userSchema = mongoose.Schema({
             message : "{VALUE} is not a valid gender"
         }
     },
-    photoUrl:{
-        type : String,
-        default : "https://www.pngitem.com/middle/ixwxbwh_user-profile-dummy-hd-png-download/",
-        validate(value){
-            if(!validator.isURL(value)){
-                throw new Error("Invalid photo URL:" + value);
-            }
+    
+    photoUrl: {
+      type: String,
+      default: "https://www.twtf.org.uk/wp-content/uploads/2024/01/dummy-image.jpg",
+      validate(value) {
+        if (!validator.isURL(value)) {
+          throw new Error("Invalid Photo URL: " + value);
         }
+      },
     },
     about:{
         type : String,

@@ -1,7 +1,7 @@
 {
   "name": "dev-tinder",
   "version": "1.0.0",
-  "description": "Tinder for Devs",
+  "description": "Tinder for Dev",
   "main": "app.js",
   "scripts": {
     "start": "node src/app.js",

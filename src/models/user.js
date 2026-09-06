@@ -49,7 +49,7 @@ const userSchema = mongoose.Schema({
     
     photoUrl: {
       type: String,
-      default: "https://www.twtf.org.uk/wp-content/uploads/2024/01/dummy-image.jpg",
+      default: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
       validate(value) {
         if (!validator.isURL(value)) {
           throw new Error("Invalid Photo URL: " + value);
